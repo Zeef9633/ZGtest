@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Zorix Global | B2B IT Procurement</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Favicon Package -->
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+<link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+<!-- Optional: For Android/Chrome -->
+<link rel="icon" type="image/png" href="android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="android-chrome-512x512.png" sizes="512x512">
+<!-- Web App Manifest -->
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#5170ff">
+    </head>
+
+  <body class="antialiased">
+
+    <header class="py-5 px-6 md:px-12 flex justify-between items-center sticky top-0 bg-white/80 backdrop-blur-md z-[100] border-b border-slate-50 w-full overflow-hidden">
+        <div class="flex items-center gap-12">
+            <a onclick="navigateTo('home')" class="cursor-pointer">
+                <img src="Untitled-2.svg" alt="Zorix Global" class="logo-main" onerror="this.outerHTML='<span class=\'font-black tracking-tighter text-xl\'>ZORIX GLOBAL<span class=\'text-blue-600\'>.</span></span>'">
+            </a>
+            <nav class="hidden lg:flex gap-8 text-institutional text-slate-400">
+                <a onclick="navigateTo('home')" class="nav-link active" data-page="home">Home</a>
+                <a onclick="navigateTo('sourcing')" class="nav-link" data-page="sourcing">Sourcing</a>
+                <a onclick="navigateTo('logistics')" class="nav-link" data-page="logistics">Logistics</a>
+                <a onclick="navigateTo('industries')" class="nav-link" data-page="industries">Industries</a>
+                <a onclick="navigateTo('contact')" class="nav-link" data-page="contact">Contact</a>
+            </nav>
+        </div>
+        <div class="flex items-center gap-4">
+            <button onclick="navigateTo('contact')" class="hidden sm:block bg-black text-white btn-brand hover:bg-slate-800">
+                Request Quote
+            </button>
+            <div id="nav-toggle" class="lg:hidden p-2" onclick="toggleMenu()">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="mobile-menu">
+        <div class="flex justify-between items-center mb-16">
+            <img src="Untitled-2.svg" alt="Zorix Global" class="logo-main" onerror="this.outerHTML='<span class=\'font-black tracking-tighter text-xl\'>ZORIX GLOBAL<span class=\'text-blue-600\'>.</span></span>'">
+            <div class="hamburger open" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <nav class="flex flex-col gap-6 text-4xl font-extrabold tracking-tighter">
+            <a class="mobile-nav-item" onclick="handleMobileNav('home')">Home</a>
+            <a class="mobile-nav-item" onclick="handleMobileNav('sourcing')">Sourcing</a>
+            <a class="mobile-nav-item" onclick="handleMobileNav('logistics')">Logistics</a>
+            <a class="mobile-nav-item" onclick="handleMobileNav('industries')">Industries</a>
+            <a class="mobile-nav-item" onclick="handleMobileNav('contact')">Contact</a>
+        </nav>
+    </div>
+
+    <main id="main-content">
+        <div id="page-home" class="page-content active">
+            <section class="hero-pane px-6 md:px-12 lg:px-24">
+                <div class="max-w-4xl z-10 w-full">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="h-px w-10 bg-blue-600"></span>
+                        <span class="text-institutional text-blue-600">Enterprise Sourcing Desk</span>
+                    </div>
+                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter leading-[0.9] mb-8">
+                        Your Global Electronics & Hardware Partner<span class="text-blue-600">.</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-600 max-w-2xl leading-relaxed mb-10">
+                        Zorix Global bridge the gap between manufacturer constraints and industrial demand, delivering critical IT assets worldwide.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <button onclick="navigateTo('contact')" class="bg-blue-600 text-white btn-brand">Start Inquiry</button>
+                        <button onclick="navigateTo('sourcing')" class="bg-white text-black border border-slate-200 btn-brand">View Capabilities</button>
+                    </div>
+                </div>
+                <div class="hero-image hidden lg:block">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=2070" alt="Tech Infrastructure">
+                </div>
+            </section>
+
+            <!-- Marquee Section -->
+            <section class="border-y border-slate-100 py-2 bg-white w-full">
+                <div class="marquee-container">
+                    <div class="marquee-track">
+                        <!-- Set 1 -->
+                        <div class="marquee-item">HP</div><div class="marquee-item">LENOVO</div><div class="marquee-item">DELL</div><div class="marquee-item">HPE</div>
+                        <div class="marquee-item">FORTINET</div><div class="marquee-item">CISCO</div><div class="marquee-item">HILLSTONE</div><div class="marquee-item">SOPHOS</div>
+                        <!-- Set 2 -->
+                        <div class="marquee-item">HP</div><div class="marquee-item">LENOVO</div><div class="marquee-item">DELL</div><div class="marquee-item">HPE</div>
+                        <div class="marquee-item">FORTINET</div><div class="marquee-item">CISCO</div><div class="marquee-item">HILLSTONE</div><div class="marquee-item">SOPHOS</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-gap px-6 md:px-12 lg:px-24 bg-slate-50 w-full">
+                <div class="grid md:grid-cols-3 gap-12 max-w-7xl mx-auto">
+                    <div class="space-y-4">
+                        <h3 class="font-bold text-2xl tracking-tight">Tier-1 Access</h3>
+                        <p class="text-slate-600 text-base leading-relaxed">Direct relationships with global distributors and vendor reserves to bypass standard lead times and regional stockouts.</p>
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="font-bold text-2xl tracking-tight">UAE Logistics</h3>
+                        <p class="text-slate-600 text-base leading-relaxed">Centralized hub in Dubai for duty-efficient staging and rapid international deployment via air and sea freight.</p>
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="font-bold text-2xl tracking-tight">Verified Supply</h3>
+                        <p class="text-slate-600 text-base leading-relaxed">Rigorous hardware authentication and compliance checks on every shipment to ensure enterprise-grade reliability.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+      <footer class="bg-black text-white py-24 px-6 md:px-12 lg:px-24 w-full">
+        <div class="flex flex-col lg:flex-row justify-between items-start gap-12 max-w-[1440px] mx-auto">
+            <div class="max-w-sm w-full">
+                <img src="Untitled-3.svg" alt="Zorix Global" class="logo-footer mb-8" onerror="this.outerHTML='<span class=\'font-black tracking-tighter text-2xl mb-8 block text-white\'>ZORIX GLOBAL<span class=\'text-blue-600\'>.</span></span>'">
+                <p class="text-slate-400 text-sm leading-relaxed">Expert B2B sourcing partner for critical IT hardware. Specialized in bridging supply chain gaps for global enterprise and telecommunication operators.</p>
+            </div>
+            
+            <div class="w-full lg:w-auto grid grid-cols-2 gap-10 md:gap-32">
+                <div>
+                    <h5 class="text-institutional text-blue-600 mb-8">Explore</h5>
+                    <ul class="space-y-4 text-xs uppercase tracking-widest font-bold text-slate-300">
+                        <li><a onclick="navigateTo('sourcing')" class="hover:text-white cursor-pointer transition-colors">Sourcing</a></li>
+                        <li><a onclick="navigateTo('logistics')" class="hover:text-white cursor-pointer transition-colors">Logistics</a></li>
+                        <li><a onclick="navigateTo('industries')" class="hover:text-white cursor-pointer transition-colors">Industries</a></li>
+                        <li><a onclick="navigateTo('contact')" class="hover:text-white cursor-pointer transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-institutional text-blue-600 mb-8">Operations</h5>
+                    <p class="text-xs uppercase tracking-widest font-bold text-slate-500 mb-3">Dubai Hub</p>
+                    <p class="text-sm font-bold text-white tracking-wide">procurement@zorixglobal.com</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-20 pt-10 border-t border-slate-900 max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-slate-500 text-xs uppercase tracking-[0.2em]">© 2026 Zorix Global.</p>
+            <p class="text-slate-500 text-xs uppercase tracking-[0.2em] font-bold">UAE • EU • US • ASIA</p>
+        </div>
+    </footer>
+
