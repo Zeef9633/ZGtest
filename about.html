@@ -18,6 +18,15 @@
             --brand-blue: #5170ff;
         }
         
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        
         .text-institutional {
             font-size: 0.75rem;
             letter-spacing: 0.2em;
@@ -33,16 +42,40 @@
             text-transform: uppercase;
             transition: all 0.3s ease;
             cursor: pointer;
+            display: inline-block;
+            text-decoration: none;
+            border: none;
+            border-radius: 0;
         }
         
-        .nav-link { cursor: pointer; transition: opacity 0.2s; }
+        .nav-link { 
+            cursor: pointer; 
+            transition: opacity 0.2s; 
+            text-decoration: none;
+            color: inherit;
+        }
         .nav-link:hover { opacity: 0.6; }
-        .nav-link.active { color: var(--brand-blue); border-bottom: 2px solid var(--brand-blue); padding-bottom: 4px; }
+        .nav-link.active { 
+            color: var(--brand-blue); 
+            border-bottom: 2px solid var(--brand-blue); 
+            padding-bottom: 4px; 
+        }
         
-        .logo-main { height: 32px; width: auto; }
-        .logo-footer { height: 40px; width: auto; }
+        .logo-main { 
+            height: 32px; 
+            width: auto; 
+            display: block;
+        }
+        .logo-footer { 
+            height: 40px; 
+            width: auto; 
+            display: block;
+        }
         
-        .section-gap { padding-top: 5rem; padding-bottom: 5rem; }
+        .section-gap { 
+            padding-top: 5rem; 
+            padding-bottom: 5rem; 
+        }
         
         .hamburger {
             width: 24px;
@@ -52,6 +85,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            z-index: 1000;
         }
 
         .hamburger span {
@@ -60,11 +94,55 @@
             height: 2px;
             background: black;
             transition: 0.3s;
+            transform-origin: center;
         }
 
-        .hamburger.open span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
-        .hamburger.open span:nth-child(2) { opacity: 0; }
-        .hamburger.open span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+        .hamburger.open span:nth-child(1) { 
+            transform: translateY(9px) rotate(45deg); 
+        }
+        .hamburger.open span:nth-child(2) { 
+            opacity: 0; 
+        }
+        .hamburger.open span:nth-child(3) { 
+            transform: translateY(-9px) rotate(-45deg); 
+        }
+        
+        #mobile-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            padding: 5rem 2rem;
+            z-index: 999;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            overflow-y: auto;
+        }
+
+        #mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        .mobile-nav-item {
+            display: block;
+            padding: 0.75rem 0;
+            transition: color 0.2s;
+            text-decoration: none;
+            color: inherit;
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        .mobile-nav-item:hover {
+            color: var(--brand-blue);
+        }
+
+        .mobile-nav-item.active {
+            color: var(--brand-blue);
+        }
         
         .bullet-dot {
             width: 6px;
@@ -73,22 +151,46 @@
             border-radius: 50%;
             flex-shrink: 0;
             margin-top: 8px;
+            display: block;
+        }
+        
+        header {
+            z-index: 1000;
+        }
+        
+        /* Fix for logo fallback */
+        .logo-fallback {
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            font-size: 1.25rem;
+        }
+        
+        /* Ensure proper spacing */
+        main {
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        /* Fix for mobile menu scroll */
+        body.menu-open {
+            overflow: hidden;
+            height: 100vh;
         }
     </style>
 </head>
 <body class="antialiased">
 
-    <header class="py-5 px-6 md:px-12 flex justify-between items-center sticky top-0 bg-white/80 backdrop-blur-md z-[100] border-b border-slate-50 w-full overflow-hidden">
+    <header class="py-5 px-6 md:px-12 flex justify-between items-center sticky top-0 bg-white/80 backdrop-blur-md z-[1000] border-b border-slate-50 w-full">
         <div class="flex items-center gap-12">
             <a href="index.html" class="cursor-pointer">
-                <img src="Untitled-2.svg" alt="Zorix Global" class="logo-main" onerror="this.outerHTML='<span class=\'font-black tracking-tighter text-xl\'>ZORIX GLOBAL<span class=\'text-blue-600\'>.</span></span>'">
+                <img src="Untitled-2.svg" alt="Zorix Global" class="logo-main" onerror="this.onerror=null; this.outerHTML='<span class=\"logo-fallback\">ZORIX GLOBAL<span class=\"text-blue-600\">.</span></span>'">
             </a>
             <nav class="hidden lg:flex gap-8 text-institutional text-slate-400">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="sourcing.html" class="nav-link">Sourcing</a>
                 <a href="logistics.html" class="nav-link">Logistics</a>
                 <a href="industries.html" class="nav-link">Industries</a>
-                <a href="about.html" class="nav-link active">About Us</a>
+                <a href="about.html" class="nav-link active">About</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </nav>
         </div>
@@ -96,31 +198,33 @@
             <a href="contact.html" class="hidden sm:block bg-black text-white btn-brand hover:bg-slate-800">
                 Request Quote
             </a>
-            <div id="nav-toggle" class="lg:hidden p-2" onclick="toggleMenu()">
+            <button id="nav-toggle" class="lg:hidden p-2" aria-label="Toggle navigation menu" onclick="toggleMenu()">
                 <div class="hamburger">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
-            </div>
+            </button>
         </div>
     </header>
 
     <div id="mobile-menu">
         <div class="flex justify-between items-center mb-16">
-            <img src="Untitled-2.svg" alt="Zorix Global" class="logo-main" onerror="this.outerHTML='<span class=\'font-black tracking-tighter text-xl\'>ZORIX GLOBAL<span class=\'text-blue-600\'>.</span></span>'">
-            <div class="hamburger open" onclick="toggleMenu()">
+            <a href="index.html" class="cursor-pointer">
+                <img src="Untitled-2.svg" alt="Zorix Global" class="logo-main" onerror="this.onerror=null; this.outerHTML='<span class=\"logo-fallback\">ZORIX GLOBAL<span class=\"text-blue-600\">.</span></span>'">
+            </a>
+            <button class="hamburger open" onclick="toggleMenu()" aria-label="Close menu">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
-        <nav class="flex flex-col gap-6 text-4xl font-extrabold tracking-tighter">
+        <nav class="flex flex-col gap-6">
             <a href="index.html" class="mobile-nav-item">Home</a>
             <a href="sourcing.html" class="mobile-nav-item">Sourcing</a>
             <a href="logistics.html" class="mobile-nav-item">Logistics</a>
             <a href="industries.html" class="mobile-nav-item">Industries</a>
-            <a href="about.html" class="mobile-nav-item">About Us</a>
+            <a href="about.html" class="mobile-nav-item active">About</a>
             <a href="contact.html" class="mobile-nav-item">Contact</a>
         </nav>
     </div>
@@ -235,7 +339,9 @@
     <footer class="bg-black text-white py-24 px-6 md:px-12 lg:px-24 w-full">
         <div class="flex flex-col lg:flex-row justify-between items-start gap-12 max-w-[1440px] mx-auto">
             <div class="max-w-sm w-full">
-                <img src="Untitled-3.svg" alt="Zorix Global" class="logo-footer mb-8" onerror="this.outerHTML='<span class=\'font-black tracking-tighter text-2xl mb-8 block text-white\'>ZORIX GLOBAL<span class=\'text-blue-600\'>.</span></span>'">
+                <a href="index.html" class="cursor-pointer">
+                    <img src="Untitled-3.svg" alt="Zorix Global" class="logo-footer mb-8" onerror="this.onerror=null; this.outerHTML='<span class=\"logo-fallback text-white text-2xl\">ZORIX GLOBAL<span class=\"text-blue-600\">.</span></span>'">
+                </a>
                 <p class="text-slate-400 text-sm leading-relaxed">Expert B2B sourcing partner for critical electronics and hardware. Specialized in bridging supply chain gaps for global enterprise and industrial operations.</p>
             </div>
             
@@ -243,11 +349,11 @@
                 <div>
                     <h5 class="text-institutional text-blue-600 mb-8">Explore</h5>
                     <ul class="space-y-4 text-xs uppercase tracking-widest font-bold text-slate-300">
-                        <li><a href="sourcing.html" class="hover:text-white cursor-pointer transition-colors">Sourcing</a></li>
-                        <li><a href="logistics.html" class="hover:text-white cursor-pointer transition-colors">Logistics</a></li>
-                        <li><a href="industries.html" class="hover:text-white cursor-pointer transition-colors">Industries</a></li>
-                        <li><a href="about.html" class="hover:text-white cursor-pointer transition-colors">About Us</a></li>
-                        <li><a href="contact.html" class="hover:text-white cursor-pointer transition-colors">Contact</a></li>
+                        <li><a href="sourcing.html" class="hover:text-white cursor-pointer transition-colors block">Sourcing</a></li>
+                        <li><a href="logistics.html" class="hover:text-white cursor-pointer transition-colors block">Logistics</a></li>
+                        <li><a href="industries.html" class="hover:text-white cursor-pointer transition-colors block">Industries</a></li>
+                        <li><a href="about.html" class="hover:text-white cursor-pointer transition-colors block">About</a></li>
+                        <li><a href="contact.html" class="hover:text-white cursor-pointer transition-colors block">Contact</a></li>
                     </ul>
                 </div>
                 <div>
@@ -268,10 +374,39 @@
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
             const hamburger = document.querySelectorAll('.hamburger');
-            const isOpen = menu.classList.toggle('active');
+            const body = document.body;
+            const isOpen = !menu.classList.contains('active');
+            
+            menu.classList.toggle('active', isOpen);
             hamburger.forEach(h => h.classList.toggle('open', isOpen));
-            document.body.style.overflow = isOpen ? 'hidden' : '';
+            
+            if (isOpen) {
+                body.classList.add('menu-open');
+            } else {
+                body.classList.remove('menu-open');
+            }
+            
+            // Update aria attributes for accessibility
+            const toggleButton = document.getElementById('nav-toggle');
+            if (toggleButton) {
+                toggleButton.setAttribute('aria-expanded', isOpen);
+                toggleButton.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+            }
         }
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.mobile-nav-item').forEach(link => {
+            link.addEventListener('click', () => {
+                toggleMenu();
+            });
+        });
+        
+        // Close mobile menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && document.getElementById('mobile-menu').classList.contains('active')) {
+                toggleMenu();
+            }
+        });
     </script>
 </body>
 </html>
