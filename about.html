@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Zorix Global | About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+    <style>
+        :root {
+            --brand-blue: #5170ff;
+        }
+        
+        .text-institutional {
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        
+        .btn-brand {
+            padding: 0.85rem 1.75rem;
+            font-weight: 700;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .nav-link { cursor: pointer; transition: opacity 0.2s; }
+        .nav-link:hover { opacity: 0.6; }
+        .nav-link.active { color: var(--brand-blue); border-bottom: 2px solid var(--brand-blue); padding-bottom: 4px; }
+        
+        .logo-main { height: 32px; width: auto; }
+        .logo-footer { height: 40px; width: auto; }
+        
+        .section-gap { padding-top: 5rem; padding-bottom: 5rem; }
+        
+        .hamburger {
+            width: 24px;
+            height: 20px;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: black;
+            transition: 0.3s;
+        }
+
+        .hamburger.open span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+        .hamburger.open span:nth-child(2) { opacity: 0; }
+        .hamburger.open span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--brand-blue);
+            line-height: 1;
+        }
+        
+        .bullet-dot {
+            width: 6px;
+            height: 6px;
+            background-color: var(--brand-blue);
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="py-5 px-6 md:px-12 flex justify-between items-center sticky top-0 bg-white/80 backdrop-blur-md z-[100] border-b border-slate-50 w-full overflow-hidden">
+        <div class="flex items-center gap-12">
+            <a href="index.html" class="cursor-pointer">
+                <img src="Untitled-2.svg" alt="Zorix Global" class="logo-main" onerror="this.outerHTML='<span class=\'font-black tracking-tighter text-xl\'>ZORIX GLOBAL<span class=\'text-blue-600\'>.</span></span>'">
+            </a>
+            <nav class="hidden lg:flex gap-8 text-institutional text-slate-400">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="sourcing.html" class="nav-link">Sourcing</a>
+                <a href="logistics.html" class="nav-link">Logistics</a>
+                <a href="industries.html" class="nav-link">Industries</a>
+                <a href="about.html" class="nav-link active">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+        </div>
+        <div class="flex items-center gap-4">
+            <a href="contact.html" class="hidden sm:block bg-black text-white btn-brand hover:bg-slate-800">
+                Request Quote
+            </a>
+            <div id="nav-toggle" class="lg:hidden p-2" onclick="toggleMenu()">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="mobile-menu">
+        <div class="flex justify-between items-center mb-16">
+            <img src="Untitled-2.svg" alt="Zorix Global" class="logo-main" onerror="this.outerHTML='<span class=\'font-black tracking-tighter text-xl\'>ZORIX GLOBAL<span class=\'text-blue-600\'>.</span></span>'">
+            <div class="hamburger open" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <nav class="flex flex-col gap-6 text-4xl font-extrabold tracking-tighter">
+            <a href="index.html" class="mobile-nav-item">Home</a>
+            <a href="sourcing.html" class="mobile-nav-item">Sourcing</a>
+            <a href="logistics.html" class="mobile-nav-item">Logistics</a>
+            <a href="industries.html" class="mobile-nav-item">Industries</a>
+            <a href="about.html" class="mobile-nav-item">About</a>
+            <a href="contact.html" class="mobile-nav-item">Contact</a>
+        </nav>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="pt-24 pb-12 px-6 md:px-12 lg:px-24">
+            <div class="max-w-5xl mx-auto">
+                <span class="text-institutional text-blue-600 mb-6 block">Our Foundation</span>
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter mb-8 leading-[0.9]">
+                    Precision Sourcing for Global Electronics<span class="text-blue-600">.</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-slate-600 leading-relaxed max-w-4xl">
+                    Based in the UAE Freezone, Zorix Global bridges critical supply gaps for industrial, telecommunications, and enterprise clients worldwide.
+                </p>
+            </div>
+        </section>
+
+        <!-- Mission & Vision -->
+        <section class="section-gap px-6 md:px-12 lg:px-24 bg-slate-50 w-full">
+            <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16">
+                <div>
+                    <h3 class="text-3xl font-bold mb-6 tracking-tight">Our Mission</h3>
+                    <p class="text-slate-600 text-lg leading-relaxed mb-8">
+                        To provide reliable, time-sensitive access to critical electronics and hardware components when standard supply channels fail. We exist to solve procurement challenges that disrupt business operations.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex gap-4 items-start">
+                            <div class="bullet-dot"></div>
+                            <p class="text-base font-semibold text-slate-800">Direct manufacturer relationships bypassing regional allocations</p>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <div class="bullet-dot"></div>
+                            <p class="text-base font-semibold text-slate-800">Strategic staging in UAE for duty-efficient global distribution</p>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <div class="bullet-dot"></div>
+                            <p class="text-base font-semibold text-slate-800">Technical validation of all components before shipment</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold mb-6 tracking-tight">Our Vision</h3>
+                    <p class="text-slate-600 text-lg leading-relaxed mb-8">
+                        To become the preferred global procurement partner for organizations that cannot afford hardware delays — especially in telecommunications, industrial automation, and enterprise infrastructure sectors.
+                    </p>
+                    <div class="bg-white p-8 border border-slate-200">
+                        <p class="text-slate-700 text-lg leading-relaxed italic mb-6">
+                            "When production lines stop or network expansions stall due to missing components, we provide the solution."
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-blue-50 flex items-center justify-center rounded-full">
+                                <span class="text-blue-600 font-bold">ZG</span>
+                            </div>
+                            <div>
+                                <p class="font-bold text-sm">Zorix Global Team</p>
+                                <p class="text-slate-500 text-xs">UAE Freezone Headquarters</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What We Handle -->
+        <section class="section-gap px-6 md:px-12 lg:px-24 w-full">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="text-institutional text-blue-600 mb-6 block">Procurement Scope</span>
+                    <h2 class="text-4xl md:text-5xl font-extrabold tracking-tighter mb-8">End-to-End Electronics Sourcing</h2>
+                    <p class="text-xl text-slate-600 max-w-3xl mx-auto">From enterprise servers to specialized industrial components, we source what keeps your operations running.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8 mb-16">
+                    <div class="p-8 border border-slate-100 hover:border-blue-200 transition-colors">
+                        <div class="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
+                            <span class="text-blue-600 font-bold text-lg">IT</span>
+                        </div>
+                        <h4 class="font-bold text-xl mb-4">Enterprise & IT Infrastructure</h4>
+                        <ul class="text-slate-600 space-y-3">
+                            <li class="flex gap-2 items-start">
+                                <span class="text-blue-600 mt-1">•</span>
+                                <span>Servers & Storage Systems</span>
+                            </li>
+                            <li class="flex gap-2 items-start">
+                                <span class="text-blue-600 mt-1">•</span>
+                                <span>Networking & Security Hardware</span>
+                            </li>
+                            <li class="flex gap-2 items-start">
+                                <span class="text-blue-600 mt-1">•</span>
+                                <span>Data Center Components</span>
+                            </li>
+                            <li class="flex gap-2 items-start">
+                                <span class="text-blue-600 mt-1">•</span>
+                                <span>Workstations & Peripherals</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="p-8 border border-slate-100 hover:border-blue-200 transition-colors">
+                        <div class="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
+                            <span class="text-blue-600 font-bold text-lg">EI</span>
+                        </div>
+                        <h4 class="font-bold text-xl mb-4">Electronics & Industrial</h4>
+                        <ul class="text-slate-600 space-y-3">
+                            <li class="flex gap-2 items-start">
+                                <span class="text-blue-600 mt-1">•</span>
+                                <span>Telecommunications Equipment</span>
+                            </li>
+                            <li class="flex gap-2 items-start">
+                                <span class="text-blue-600 mt-1">•</span>
+                                <span>Industrial Automation Components</span>
+                            </li>
+                            <li class="flex gap-2 items-start">
+                                <span class="text-blue-600 mt-1">•</span>
+                                <span>Specialized Sensors & Controllers</span>
+                            </li>
+                            <li class="flex gap-2 items-start">
+                                <span class="text-blue-600 mt-1">•</span>
+                                <span>Legacy & Hard-to-Find Parts</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="p-8 border border-slate-100 hover:border-blue-200 transition-colors">
+                        <div class="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
+                            <span class="text-blue-600 font-bold text-lg">HC</span>
+                        </div>
+                        <h4 class="font-bold text-xl mb-4">Hardware Components</h4>
+                        <ul class="text-slate-600 space-y-3">
+                            <li class="flex gap-2 items-start">
+                                <span class="text-blue-600 mt-1">•</span>
+                                <span>Semiconductors & ICs</span>
+                            </li>
+                            <li class="flex gap-2 items-start">
+                                <span class="text-blue-600 mt-1">•</span>
+                                <span>Power Supplies & Converters</span>
+                            </li>
+                            <li class="flex gap-2 items-start">
+                                <span class="text-blue-600 mt-1">•</span>
+                                <span>Connectivity & RF Components</span>
+                            </li>
+                            <li class="flex gap-2 items-start">
+                                <span class="text-blue-600 mt-1">•</span>
+                                <span>Embedded Systems</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- UAE Advantage -->
+        <section class="section-gap px-6 md:px-12 lg:px-24 bg-blue-50 w-full">
+            <div class="max-w-5xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="text-institutional text-blue-600 mb-6 block">Strategic Location</span>
+                        <h2 class="text-4xl font-extrabold tracking-tighter mb-8">The UAE Freezone Advantage</h2>
+                        <p class="text-slate-700 text-lg leading-relaxed mb-8">
+                            Our Dubai Freezone base provides unique benefits for international electronics procurement and distribution:
+                        </p>
+                        
+                        <div class="space-y-8">
+                            <div class="flex gap-6">
+                                <div class="w-12 h-12 bg-white flex items-center justify-center rounded-full flex-shrink-0">
+                                    <span class="text-blue-600 font-bold">01</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">Duty-Efficient Hub</h4>
+                                    <p class="text-slate-600">Freezone benefits allow cost-effective staging and re-export of goods with minimal customs friction.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex gap-6">
+                                <div class="w-12 h-12 bg-white flex items-center justify-center rounded-full flex-shrink-0">
+                                    <span class="text-blue-600 font-bold">02</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">Global Connectivity</h4>
+                                    <p class="text-slate-600">Major shipping and air freight corridors connect us to Asia, Europe, Africa, and the Americas within 48 hours.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex gap-6">
+                                <div class="w-12 h-12 bg-white flex items-center justify-center rounded-full flex-shrink-0">
+                                    <span class="text-blue-600 font-bold">03</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">Business-Friendly Environment</h4>
+                                    <p class="text-slate-600">100% foreign ownership, tax benefits, and simplified administrative procedures.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-10 border border-blue-100">
+                        <h4 class="font-bold text-xl mb-6 uppercase tracking-tight border-b border-slate-100 pb-4">Our Operating Principle</h4>
+                        <p class="text-slate-700 text-lg leading-relaxed mb-8">
+                            We operate on a simple premise: when you need critical electronics that are unavailable through standard channels, we find them.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
+                                    <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+                                </div>
+                                <p class="text-slate-700 font-medium">No minimum order quantities for urgent requirements</p>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
+                                    <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+                                </div>
+                                <p class="text-slate-700 font-medium">Transparent pricing with no hidden fees</p>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
+                                    <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+                                </div>
+                                <p class="text-slate-700 font-medium">Dedicated procurement specialist per project</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Overview -->
+        <section class="section-gap px-6 md:px-12 lg:px-24 bg-slate-900 text-white w-full">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="text-institutional text-blue-400 mb-6 block">Our Approach</span>
+                    <h2 class="text-4xl md:text-5xl font-extrabold tracking-tighter mb-8">How We Secure Your Requirements</h2>
+                </div>
+                
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="text-white font-bold text-xl">1</span>
+                        </div>
+                        <h4 class="font-bold text-lg mb-4">Requirement Analysis</h4>
+                        <p class="text-slate-300 text-sm">We review technical specifications, quantities, and urgency to determine optimal sourcing strategy.</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="text-white font-bold text-xl">2</span>
+                        </div>
+                        <h4 class="font-bold text-lg mb-4">Global Sourcing</h4>
+                        <p class="text-slate-300 text-sm">Our network contacts manufacturers and distributors across US, Europe, and Asia to locate inventory.</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="text-white font-bold text-xl">3</span>
+                        </div>
+                        <h4 class="font-bold text-lg mb-4">Verification & QC</h4>
+                        <p class="text-slate-300 text-sm">All components undergo technical validation and quality checks before shipment.</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="text-white font-bold text-xl">4</span>
+                        </div>
+                        <h4 class="font-bold text-lg mb-4">Logistics Execution</h4>
+                        <p class="text-slate-300 text-sm">Managed shipping with full documentation, insurance, and customs clearance support.</p>
+                    </div>
+                </div>
+                
+                <div class="mt-16 pt-10 border-t border-slate-800 text-center">
+                    <p class="text-slate-400 text-lg max-w-3xl mx-auto">
+                        We don't just take orders — we solve procurement problems. When you're facing a hardware shortage that impacts operations, we're your direct line to a solution.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section-gap px-6 md:px-12 lg:px-24 w-full">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-extrabold tracking-tighter mb-8">Have a Critical Requirement?</h2>
+                <p class="text-xl text-slate-600 mb-12 max-w-3xl mx-auto">
+                    Our procurement specialists are ready to evaluate your electronics or hardware needs and provide sourcing options within 24 hours.
+                </p>
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <a href="contact.html" class="bg-blue-600 text-white btn-brand hover:bg-blue-700">Submit Inquiry</a>
+                    <a href="industries.html" class="bg-white text-black border border-slate-200 btn-brand">View Industries</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black text-white py-24 px-6 md:px-12 lg:px-24 w-full">
+        <div class="flex flex-col lg:flex-row justify-between items-start gap-12 max-w-[1440px] mx-auto">
+            <div class="max-w-sm w-full">
+                <img src="Untitled-3.svg" alt="Zorix Global" class="logo-footer mb-8" onerror="this.outerHTML='<span class=\'font-black tracking-tighter text-2xl mb-8 block text-white\'>ZORIX GLOBAL<span class=\'text-blue-600\'>.</span></span>'">
+                <p class="text-slate-400 text-sm leading-relaxed">Expert B2B sourcing partner for critical electronics and hardware. Specialized in bridging supply chain gaps for global enterprise and industrial operations.</p>
+            </div>
+            
+            <div class="w-full lg:w-auto grid grid-cols-2 gap-10 md:gap-32">
+                <div>
+                    <h5 class="text-institutional text-blue-600 mb-8">Explore</h5>
+                    <ul class="space-y-4 text-xs uppercase tracking-widest font-bold text-slate-300">
+                        <li><a href="sourcing.html" class="hover:text-white cursor-pointer transition-colors">Sourcing</a></li>
+                        <li><a href="logistics.html" class="hover:text-white cursor-pointer transition-colors">Logistics</a></li>
+                        <li><a href="industries.html" class="hover:text-white cursor-pointer transition-colors">Industries</a></li>
+                        <li><a href="about.html" class="hover:text-white cursor-pointer transition-colors">About</a></li>
+                        <li><a href="contact.html" class="hover:text-white cursor-pointer transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-institutional text-blue-600 mb-8">Operations</h5>
+                    <p class="text-xs uppercase tracking-widest font-bold text-slate-500 mb-3">UAE Freezone Hub</p>
+                    <p class="text-sm font-bold text-white tracking-wide">procurement@zorixglobal.com</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-20 pt-10 border-t border-slate-900 max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-slate-500 text-xs uppercase tracking-[0.2em]">© 2026 Zorix Global.</p>
+            <p class="text-slate-500 text-xs uppercase tracking-[0.2em] font-bold">UAE • EU • US • ASIA</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const hamburger = document.querySelectorAll('.hamburger');
+            const isOpen = menu.classList.toggle('active');
+            hamburger.forEach(h => h.classList.toggle('open', isOpen));
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+        }
+    </script>
+</body>
+</html>
