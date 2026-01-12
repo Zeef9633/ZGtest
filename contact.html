@@ -17,6 +17,7 @@
 </head>
 <body class="antialiased">
 
+    <!-- Header -->
     <header class="py-5 px-6 md:px-12 flex justify-between items-center sticky top-0 bg-white/80 backdrop-blur-md z-[100] border-b border-slate-50 w-full overflow-hidden">
         <div class="flex items-center gap-12">
             <a href="index.html" class="cursor-pointer">
@@ -27,7 +28,7 @@
                 <a href="sourcing.html" class="nav-link">Sourcing</a>
                 <a href="logistics.html" class="nav-link">Logistics</a>
                 <a href="industries.html" class="nav-link">Industries</a>
-                 <a href="about.html" class="nav-link">About Us</a>
+                <a href="about.html" class="nav-link">About Us</a>
                 <a href="contact.html" class="nav-link active">Contact</a>
             </nav>
         </div>
@@ -45,7 +46,8 @@
         </div>
     </header>
 
-    <div id="mobile-menu">
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden">
         <div class="flex justify-between items-center mb-16">
             <img src="Untitled-2.svg" alt="Zorix Global" class="logo-main" onerror="this.outerHTML='<span class=\'font-black tracking-tighter text-xl\'>ZORIX GLOBAL<span class=\'text-blue-600\'>.</span></span>'">
             <div class="hamburger open" onclick="toggleMenu()">
@@ -59,32 +61,26 @@
             <a href="sourcing.html" class="mobile-nav-item">Sourcing</a>
             <a href="logistics.html" class="mobile-nav-item">Logistics</a>
             <a href="industries.html" class="mobile-nav-item">Industries</a>
-             <a href="about.html" class="mobile-nav-item">About Us</a>
+            <a href="about.html" class="mobile-nav-item">About Us</a>
             <a href="contact.html" class="mobile-nav-item">Contact</a>
         </nav>
     </div>
 
-
-
-<!-- SUBMISSION SUCCESS MODAL -->
-<div id="submission-modal" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50">
-    <div class="bg-white max-w-md w-full p-12 rounded-2xl text-center shadow-xl relative">
-        <h2 class="text-4xl font-extrabold tracking-tighter mb-6 uppercase">Request Submitted</h2>
-        <p class="text-slate-600 mb-10 text-lg">
-            Your request has been sent to our procurement desk. A specialist will review your requirements and respond shortly.
-        </p>
-        <button id="close-modal" class="bg-black text-white btn-brand px-12 py-4 hover:bg-slate-800 rounded-md">
-            Return Home
-        </button>
+    <!-- Submission Modal -->
+    <div id="submission-modal" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50">
+        <div class="bg-white max-w-md w-full p-12 rounded-2xl text-center shadow-xl relative">
+            <h2 class="text-4xl font-extrabold tracking-tighter mb-6 uppercase">Request Submitted</h2>
+            <p class="text-slate-600 mb-10 text-lg">
+                Your request has been sent to our procurement desk. A specialist will review your requirements and respond shortly.
+            </p>
+            <button id="close-modal" class="bg-black text-white btn-brand px-12 py-4 hover:bg-slate-800 rounded-md">
+                Return Home
+            </button>
+        </div>
     </div>
-</div>
 
-    
-
-   <main>
-
-    <!-- CONTACT FORM PAGE -->
-    <div id="page-contact" class="page-content active">
+    <!-- Main -->
+    <main>
         <section class="py-24 px-6 md:px-12 lg:px-24 w-full">
             <div class="max-w-4xl mx-auto w-full">
                 <div class="text-center mb-16">
@@ -92,6 +88,7 @@
                     <h2 class="text-4xl md:text-6xl font-extrabold tracking-tighter mb-8">Direct Inquiry</h2>
                 </div>
 
+                <!-- Contact Form -->
                 <form action="https://formspree.io/f/mojvgera" method="POST" class="max-w-2xl mx-auto space-y-6 w-full" id="contact-inquiry-form">
                     <div class="grid md:grid-cols-2 gap-6">
                         <div class="space-y-1">
@@ -113,26 +110,11 @@
                     </div>
                     <button type="submit" class="w-full bg-blue-600 text-white btn-brand py-5 hover:bg-blue-700">Submit Procurement Request</button>
                 </form>
-
             </div>
         </section>
-    </div>
+    </main>
 
-    <!-- THANK YOU PAGE -->
-    <div id="page-thankyou" class="page-content hidden">
-        <div class="flex-grow flex items-center justify-center py-24 px-6">
-            <div class="max-w-md text-center">
-                <h2 class="text-4xl font-extrabold tracking-tighter mb-6 uppercase">Inquiry Logged</h2>
-                <p class="text-slate-600 mb-10 text-lg">Your request has been sent to our procurement desk. A specialist will review your requirements and respond shortly.</p>
-                <button onclick="navigateTo('contact')" class="bg-black text-white btn-brand px-12">Return Home</button>
-            </div>
-        </div>
-    </div>
-
-</main>
-
-
-
+    <!-- Footer -->
     <footer class="bg-black text-white py-24 px-6 md:px-12 lg:px-24 w-full">
         <div class="flex flex-col lg:flex-row justify-between items-start gap-12 max-w-[1440px] mx-auto">
             <div class="max-w-sm w-full">
@@ -165,10 +147,9 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
-
+    <!-- Scripts -->
     <script>
-    // Navigation toggle for mobile
+    // Mobile menu toggle
     function toggleMenu() {
         const menu = document.getElementById('mobile-menu');
         const hamburger = document.querySelectorAll('.hamburger');
@@ -177,22 +158,16 @@
         document.body.style.overflow = isOpen ? 'hidden' : '';
     }
 
-    // Page navigation function
-    function navigateTo(pageId) {
-        document.querySelectorAll('.page-content').forEach(p => p.classList.add('hidden'));
-        const target = document.getElementById('page-' + pageId);
-        if (target) target.classList.remove('hidden');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    // Form submission handler
+    // Form submission
     document.addEventListener("DOMContentLoaded", () => {
         const form = document.getElementById('contact-inquiry-form');
-        if (!form) return;
+        const modal = document.getElementById('submission-modal');
+        const closeBtn = document.getElementById('close-modal');
+
+        if (!form || !modal || !closeBtn) return;
 
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
-
             const btn = form.querySelector('button');
             btn.innerText = "SUBMITTING...";
             btn.disabled = true;
@@ -207,13 +182,7 @@
                 });
 
                 if (response.ok) {
-                    // Hide contact form page
-                    document.getElementById('page-contact').classList.add('hidden');
-
-                    // Show thank-you page
-                    document.getElementById('page-thankyou').classList.remove('hidden');
-
-                    // Reset the form
+                    modal.classList.remove('hidden'); // show modal
                     form.reset();
                 } else {
                     alert("Submission failed. Please try again.");
@@ -226,9 +195,14 @@
                 btn.disabled = false;
             }
         });
-    });
-</script>
 
-   
+        // Close modal
+        closeBtn.addEventListener('click', () => {
+            modal.classList.add('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    });
+    </script>
+
 </body>
 </html>
