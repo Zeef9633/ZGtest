@@ -52,4 +52,47 @@
                 window.scrollTo(0, window.scrollY);
             }
         });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contact-inquiry-form");
+
+    if (!form) return;
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+
+        try {
+            const response = await fetch("https://formspree.io/f/mojvgera", {
+                method: "POST",
+                body: formData,
+                headers: {
+                    "Accept": "application/json"
+                }
+            });
+
+            if (response.ok) {
+                // Hide all pages
+                document.querySelectorAll(".page-content").forEach(p => {
+                    p.classList.add("hidden");
+                });
+
+                // Show thank-you page
+                document.getElementById("page-thankyou").classList.remove("hidden");
+
+                // Reset form
+                form.reset();
+            } else {
+                alert("Submission failed. Please try again.");
+            }
+        } catch (error) {
+            alert("Network error. Please try again later.");
+        }
+    });
+});
+
+
+
     </script>
