@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
@@ -67,13 +66,6 @@
         .hamburger.open span:nth-child(2) { opacity: 0; }
         .hamburger.open span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
         
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--brand-blue);
-            line-height: 1;
-        }
-        
         .bullet-dot {
             width: 6px;
             height: 6px;
@@ -96,7 +88,7 @@
                 <a href="sourcing.html" class="nav-link">Sourcing</a>
                 <a href="logistics.html" class="nav-link">Logistics</a>
                 <a href="industries.html" class="nav-link">Industries</a>
-                <a href="about.html" class="nav-link active">About</a>
+                <a href="about.html" class="nav-link active">About Us</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </nav>
         </div>
@@ -136,56 +128,63 @@
     <main>
         <!-- Hero Section -->
         <section class="pt-24 pb-12 px-6 md:px-12 lg:px-24">
-            <div class="max-w-5xl mx-auto">
-                <span class="text-institutional text-blue-600 mb-6 block">Our Foundation</span>
-                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter mb-8 leading-[0.9]">
-                    Precision Sourcing for Global Electronics<span class="text-blue-600">.</span>
-                </h1>
-                <p class="text-xl md:text-2xl text-slate-600 leading-relaxed max-w-4xl">
-                    Based in the UAE Freezone, Zorix Global bridges critical supply gaps for industrial, telecommunications, and enterprise clients worldwide.
-                </p>
+            <div class="max-w-4xl">
+                <span class="text-institutional text-blue-600 mb-6 block">Our Company</span>
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tighter mb-8 leading-tight">Global Electronics Sourcing Partner</h1>
+                <p class="text-xl md:text-2xl text-slate-600 leading-relaxed">Based in the UAE Freezone, we bridge supply gaps for IT, electronics, and industrial hardware worldwide.</p>
             </div>
         </section>
 
-        <!-- Mission & Vision -->
+        <!-- Core Description -->
         <section class="section-gap px-6 md:px-12 lg:px-24 bg-slate-50 w-full">
-            <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16">
-                <div>
-                    <h3 class="text-3xl font-bold mb-6 tracking-tight">Our Mission</h3>
-                    <p class="text-slate-600 text-lg leading-relaxed mb-8">
-                        To provide reliable, time-sensitive access to critical electronics and hardware components when standard supply channels fail. We exist to solve procurement challenges that disrupt business operations.
-                    </p>
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12">
                     <div class="space-y-6">
-                        <div class="flex gap-4 items-start">
-                            <div class="bullet-dot"></div>
-                            <p class="text-base font-semibold text-slate-800">Direct manufacturer relationships bypassing regional allocations</p>
-                        </div>
-                        <div class="flex gap-4 items-start">
-                            <div class="bullet-dot"></div>
-                            <p class="text-base font-semibold text-slate-800">Strategic staging in UAE for duty-efficient global distribution</p>
-                        </div>
-                        <div class="flex gap-4 items-start">
-                            <div class="bullet-dot"></div>
-                            <p class="text-base font-semibold text-slate-800">Technical validation of all components before shipment</p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="text-3xl font-bold mb-6 tracking-tight">Our Vision</h3>
-                    <p class="text-slate-600 text-lg leading-relaxed mb-8">
-                        To become the preferred global procurement partner for organizations that cannot afford hardware delays — especially in telecommunications, industrial automation, and enterprise infrastructure sectors.
-                    </p>
-                    <div class="bg-white p-8 border border-slate-200">
-                        <p class="text-slate-700 text-lg leading-relaxed italic mb-6">
-                            "When production lines stop or network expansions stall due to missing components, we provide the solution."
+                        <h3 class="text-2xl font-bold tracking-tight">What We Do</h3>
+                        <p class="text-slate-600 text-base leading-relaxed">
+                            Zorix Global sources critical electronics and hardware components when standard distribution channels fail. We focus on time-sensitive requirements for industrial, telecommunications, and enterprise clients.
                         </p>
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-blue-50 flex items-center justify-center rounded-full">
-                                <span class="text-blue-600 font-bold">ZG</span>
+                        <ul class="space-y-4">
+                            <li class="flex gap-4 items-start">
+                                <div class="bullet-dot"></div>
+                                <p class="text-base font-semibold text-slate-800">Enterprise IT infrastructure & servers</p>
+                            </li>
+                            <li class="flex gap-4 items-start">
+                                <div class="bullet-dot"></div>
+                                <p class="text-base font-semibold text-slate-800">Industrial electronics & components</p>
+                            </li>
+                            <li class="flex gap-4 items-start">
+                                <div class="bullet-dot"></div>
+                                <p class="text-base font-semibold text-slate-800">Telecommunications hardware</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-bold tracking-tight">UAE Freezone Advantage</h3>
+                        <p class="text-slate-600 text-base leading-relaxed">
+                            Our Dubai base provides strategic benefits for international procurement and duty-efficient distribution to global markets.
+                        </p>
+                        <div class="space-y-6">
+                            <div class="flex gap-4 items-start">
+                                <span class="text-blue-600 font-bold">01</span>
+                                <div>
+                                    <h4 class="font-bold mb-1 uppercase text-xs tracking-wider">Duty-Efficient Hub</h4>
+                                    <p class="text-slate-600 text-sm">Freezone staging for cost-effective global redistribution.</p>
+                                </div>
                             </div>
-                            <div>
-                                <p class="font-bold text-sm">Zorix Global Team</p>
-                                <p class="text-slate-500 text-xs">UAE Freezone Headquarters</p>
+                            <div class="flex gap-4 items-start">
+                                <span class="text-blue-600 font-bold">02</span>
+                                <div>
+                                    <h4 class="font-bold mb-1 uppercase text-xs tracking-wider">Global Access</h4>
+                                    <p class="text-slate-600 text-sm">Direct connections to major tech manufacturing regions.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <span class="text-blue-600 font-bold">03</span>
+                                <div>
+                                    <h4 class="font-bold mb-1 uppercase text-xs tracking-wider">Simplified Trade</h4>
+                                    <p class="text-slate-600 text-sm">Streamlined customs and documentation processes.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -193,229 +192,42 @@
             </div>
         </section>
 
-        <!-- What We Handle -->
+        <!-- Operating Principle -->
         <section class="section-gap px-6 md:px-12 lg:px-24 w-full">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-16">
-                    <span class="text-institutional text-blue-600 mb-6 block">Procurement Scope</span>
-                    <h2 class="text-4xl md:text-5xl font-extrabold tracking-tighter mb-8">End-to-End Electronics Sourcing</h2>
-                    <p class="text-xl text-slate-600 max-w-3xl mx-auto">From enterprise servers to specialized industrial components, we source what keeps your operations running.</p>
-                </div>
-                
-                <div class="grid md:grid-cols-3 gap-8 mb-16">
-                    <div class="p-8 border border-slate-100 hover:border-blue-200 transition-colors">
-                        <div class="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
-                            <span class="text-blue-600 font-bold text-lg">IT</span>
-                        </div>
-                        <h4 class="font-bold text-xl mb-4">Enterprise & IT Infrastructure</h4>
-                        <ul class="text-slate-600 space-y-3">
-                            <li class="flex gap-2 items-start">
-                                <span class="text-blue-600 mt-1">•</span>
-                                <span>Servers & Storage Systems</span>
-                            </li>
-                            <li class="flex gap-2 items-start">
-                                <span class="text-blue-600 mt-1">•</span>
-                                <span>Networking & Security Hardware</span>
-                            </li>
-                            <li class="flex gap-2 items-start">
-                                <span class="text-blue-600 mt-1">•</span>
-                                <span>Data Center Components</span>
-                            </li>
-                            <li class="flex gap-2 items-start">
-                                <span class="text-blue-600 mt-1">•</span>
-                                <span>Workstations & Peripherals</span>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <div class="p-8 border border-slate-100 hover:border-blue-200 transition-colors">
-                        <div class="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
-                            <span class="text-blue-600 font-bold text-lg">EI</span>
-                        </div>
-                        <h4 class="font-bold text-xl mb-4">Electronics & Industrial</h4>
-                        <ul class="text-slate-600 space-y-3">
-                            <li class="flex gap-2 items-start">
-                                <span class="text-blue-600 mt-1">•</span>
-                                <span>Telecommunications Equipment</span>
-                            </li>
-                            <li class="flex gap-2 items-start">
-                                <span class="text-blue-600 mt-1">•</span>
-                                <span>Industrial Automation Components</span>
-                            </li>
-                            <li class="flex gap-2 items-start">
-                                <span class="text-blue-600 mt-1">•</span>
-                                <span>Specialized Sensors & Controllers</span>
-                            </li>
-                            <li class="flex gap-2 items-start">
-                                <span class="text-blue-600 mt-1">•</span>
-                                <span>Legacy & Hard-to-Find Parts</span>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <div class="p-8 border border-slate-100 hover:border-blue-200 transition-colors">
-                        <div class="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
-                            <span class="text-blue-600 font-bold text-lg">HC</span>
-                        </div>
-                        <h4 class="font-bold text-xl mb-4">Hardware Components</h4>
-                        <ul class="text-slate-600 space-y-3">
-                            <li class="flex gap-2 items-start">
-                                <span class="text-blue-600 mt-1">•</span>
-                                <span>Semiconductors & ICs</span>
-                            </li>
-                            <li class="flex gap-2 items-start">
-                                <span class="text-blue-600 mt-1">•</span>
-                                <span>Power Supplies & Converters</span>
-                            </li>
-                            <li class="flex gap-2 items-start">
-                                <span class="text-blue-600 mt-1">•</span>
-                                <span>Connectivity & RF Components</span>
-                            </li>
-                            <li class="flex gap-2 items-start">
-                                <span class="text-blue-600 mt-1">•</span>
-                                <span>Embedded Systems</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- UAE Advantage -->
-        <section class="section-gap px-6 md:px-12 lg:px-24 bg-blue-50 w-full">
-            <div class="max-w-5xl mx-auto">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-3 gap-8">
                     <div>
-                        <span class="text-institutional text-blue-600 mb-6 block">Strategic Location</span>
-                        <h2 class="text-4xl font-extrabold tracking-tighter mb-8">The UAE Freezone Advantage</h2>
-                        <p class="text-slate-700 text-lg leading-relaxed mb-8">
-                            Our Dubai Freezone base provides unique benefits for international electronics procurement and distribution:
+                        <h4 class="font-bold text-xl uppercase tracking-tight border-b border-slate-100 pb-4 mb-6">Our Approach</h4>
+                        <p class="text-slate-600 text-base leading-relaxed">
+                            We operate on direct inquiry basis — when you have a critical requirement that standard channels cannot fulfill, we provide the solution.
                         </p>
-                        
-                        <div class="space-y-8">
-                            <div class="flex gap-6">
-                                <div class="w-12 h-12 bg-white flex items-center justify-center rounded-full flex-shrink-0">
-                                    <span class="text-blue-600 font-bold">01</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-lg mb-2">Duty-Efficient Hub</h4>
-                                    <p class="text-slate-600">Freezone benefits allow cost-effective staging and re-export of goods with minimal customs friction.</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex gap-6">
-                                <div class="w-12 h-12 bg-white flex items-center justify-center rounded-full flex-shrink-0">
-                                    <span class="text-blue-600 font-bold">02</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-lg mb-2">Global Connectivity</h4>
-                                    <p class="text-slate-600">Major shipping and air freight corridors connect us to Asia, Europe, Africa, and the Americas within 48 hours.</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex gap-6">
-                                <div class="w-12 h-12 bg-white flex items-center justify-center rounded-full flex-shrink-0">
-                                    <span class="text-blue-600 font-bold">03</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-lg mb-2">Business-Friendly Environment</h4>
-                                    <p class="text-slate-600">100% foreign ownership, tax benefits, and simplified administrative procedures.</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                    
-                    <div class="bg-white p-10 border border-blue-100">
-                        <h4 class="font-bold text-xl mb-6 uppercase tracking-tight border-b border-slate-100 pb-4">Our Operating Principle</h4>
-                        <p class="text-slate-700 text-lg leading-relaxed mb-8">
-                            We operate on a simple premise: when you need critical electronics that are unavailable through standard channels, we find them.
+                    <div>
+                        <h4 class="font-bold text-xl uppercase tracking-tight border-b border-slate-100 pb-4 mb-6">Verification</h4>
+                        <p class="text-slate-600 text-base leading-relaxed">
+                            All components undergo technical validation and quality checks before shipment to ensure enterprise-grade reliability.
                         </p>
-                        <div class="space-y-4">
-                            <div class="flex items-center gap-4">
-                                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
-                                    <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
-                                </div>
-                                <p class="text-slate-700 font-medium">No minimum order quantities for urgent requirements</p>
-                            </div>
-                            <div class="flex items-center gap-4">
-                                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
-                                    <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
-                                </div>
-                                <p class="text-slate-700 font-medium">Transparent pricing with no hidden fees</p>
-                            </div>
-                            <div class="flex items-center gap-4">
-                                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
-                                    <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
-                                </div>
-                                <p class="text-slate-700 font-medium">Dedicated procurement specialist per project</p>
-                            </div>
-                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Process Overview -->
-        <section class="section-gap px-6 md:px-12 lg:px-24 bg-slate-900 text-white w-full">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-16">
-                    <span class="text-institutional text-blue-400 mb-6 block">Our Approach</span>
-                    <h2 class="text-4xl md:text-5xl font-extrabold tracking-tighter mb-8">How We Secure Your Requirements</h2>
-                </div>
-                
-                <div class="grid md:grid-cols-4 gap-8">
-                    <div class="text-center">
-                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <span class="text-white font-bold text-xl">1</span>
-                        </div>
-                        <h4 class="font-bold text-lg mb-4">Requirement Analysis</h4>
-                        <p class="text-slate-300 text-sm">We review technical specifications, quantities, and urgency to determine optimal sourcing strategy.</p>
+                    <div>
+                        <h4 class="font-bold text-xl uppercase tracking-tight border-b border-slate-100 pb-4 mb-6">Transparency</h4>
+                        <p class="text-slate-600 text-base leading-relaxed">
+                            Clear pricing, no hidden fees, and dedicated communication throughout the procurement process.
+                        </p>
                     </div>
-                    
-                    <div class="text-center">
-                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <span class="text-white font-bold text-xl">2</span>
-                        </div>
-                        <h4 class="font-bold text-lg mb-4">Global Sourcing</h4>
-                        <p class="text-slate-300 text-sm">Our network contacts manufacturers and distributors across US, Europe, and Asia to locate inventory.</p>
-                    </div>
-                    
-                    <div class="text-center">
-                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <span class="text-white font-bold text-xl">3</span>
-                        </div>
-                        <h4 class="font-bold text-lg mb-4">Verification & QC</h4>
-                        <p class="text-slate-300 text-sm">All components undergo technical validation and quality checks before shipment.</p>
-                    </div>
-                    
-                    <div class="text-center">
-                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <span class="text-white font-bold text-xl">4</span>
-                        </div>
-                        <h4 class="font-bold text-lg mb-4">Logistics Execution</h4>
-                        <p class="text-slate-300 text-sm">Managed shipping with full documentation, insurance, and customs clearance support.</p>
-                    </div>
-                </div>
-                
-                <div class="mt-16 pt-10 border-t border-slate-800 text-center">
-                    <p class="text-slate-400 text-lg max-w-3xl mx-auto">
-                        We don't just take orders — we solve procurement problems. When you're facing a hardware shortage that impacts operations, we're your direct line to a solution.
-                    </p>
                 </div>
             </div>
         </section>
 
         <!-- CTA Section -->
-        <section class="section-gap px-6 md:px-12 lg:px-24 w-full">
+        <section class="section-gap px-6 md:px-12 lg:px-24 bg-black text-white w-full">
             <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-4xl md:text-5xl font-extrabold tracking-tighter mb-8">Have a Critical Requirement?</h2>
-                <p class="text-xl text-slate-600 mb-12 max-w-3xl mx-auto">
-                    Our procurement specialists are ready to evaluate your electronics or hardware needs and provide sourcing options within 24 hours.
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tighter mb-8">Need Critical Components?</h2>
+                <p class="text-slate-300 text-lg mb-12 max-w-2xl mx-auto">
+                    Submit your electronics or hardware requirements for direct sourcing evaluation.
                 </p>
-                <div class="flex flex-wrap gap-4 justify-center">
-                    <a href="contact.html" class="bg-blue-600 text-white btn-brand hover:bg-blue-700">Submit Inquiry</a>
-                    <a href="industries.html" class="bg-white text-black border border-slate-200 btn-brand">View Industries</a>
-                </div>
+                <a href="contact.html" class="inline-block bg-blue-600 text-white btn-brand hover:bg-blue-700">
+                    Submit Inquiry
+                </a>
             </div>
         </section>
     </main>
@@ -452,7 +264,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
     <script>
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
