@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Zorix Global | Inquiry Submitted</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+</head>
+
+<body class="antialiased min-h-screen flex flex-col">
+
+<header class="py-5 px-6 md:px-12 flex justify-between items-center sticky top-0 bg-white/80 backdrop-blur-md z-[100] border-b border-slate-50 w-full overflow-hidden">
+    <div class="flex items-center gap-12">
+        <a href="index.html">
+            <img src="Untitled-2.svg" alt="Zorix Global" class="logo-main"
+                 onerror="this.outerHTML='<span class=\'font-black tracking-tighter text-xl\'>ZORIX GLOBAL<span class=\'text-blue-600\'>.</span></span>'">
+        </a>
+
+        <nav class="hidden lg:flex gap-8 text-institutional text-slate-400">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="sourcing.html" class="nav-link">Sourcing</a>
+            <a href="logistics.html" class="nav-link">Logistics</a>
+            <a href="industries.html" class="nav-link">Industries</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+    </div>
+
+    <div class="flex items-center gap-4">
+        <a href="contact.html" class="hidden sm:block bg-black text-white btn-brand hover:bg-slate-800">
+            Request Quote
+        </a>
+
+        <div id="nav-toggle" class="lg:hidden p-2" onclick="toggleMenu()">
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div id="mobile-menu">
+    <div class="flex justify-between items-center mb-16">
+        <img src="Untitled-2.svg" alt="Zorix Global" class="logo-main"
+             onerror="this.outerHTML='<span class=\'font-black tracking-tighter text-xl\'>ZORIX GLOBAL<span class=\'text-blue-600\'>.</span></span>'">
+        <div class="hamburger open" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+
+    <nav class="flex flex-col gap-6 text-4xl font-extrabold tracking-tighter">
+        <a href="index.html" class="mobile-nav-item">Home</a>
+        <a href="sourcing.html" class="mobile-nav-item">Sourcing</a>
+        <a href="logistics.html" class="mobile-nav-item">Logistics</a>
+        <a href="industries.html" class="mobile-nav-item">Industries</a>
+        <a href="about.html" class="mobile-nav-item">About Us</a>
+        <a href="contact.html" class="mobile-nav-item">Contact</a>
+    </nav>
+</div>
+
+<main class="flex-grow flex items-center justify-center px-6">
+    <section class="py-24 text-center max-w-md">
+        <span class="text-institutional text-blue-600 mb-6 block">Submission Confirmed</span>
+
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tighter mb-6 uppercase">
+            Inquiry Logged
+        </h1>
+
+        <p class="text-slate-600 text-lg leading-relaxed mb-12">
+            Your request has been received by our procurement desk.
+            A specialist will review the details and respond shortly.
+        </p>
+
+        <a href="index.html" class="inline-block bg-black text-white btn-brand px-12 hover:bg-slate-800">
+            Return Home
+        </a>
+    </section>
+</main>
+
+<footer class="bg-black text-white py-24 px-6 md:px-12 lg:px-24 w-full">
+    <div class="flex flex-col lg:flex-row justify-between items-start gap-12 max-w-[1440px] mx-auto">
+        <div class="max-w-sm w-full">
+            <img src="Untitled-3.svg" alt="Zorix Global" class="logo-footer mb-8"
+                 onerror="this.outerHTML='<span class=\'font-black tracking-tighter text-2xl mb-8 block text-white\'>ZORIX GLOBAL<span class=\'text-blue-600\'>.</span></span>'">
+            <p class="text-slate-400 text-sm leading-relaxed">
+                Expert B2B sourcing partner for critical electronics and industrial hardware.
+            </p>
+        </div>
+
+        <div class="w-full lg:w-auto grid grid-cols-2 gap-10 md:gap-32">
+            <div>
+                <h5 class="text-institutional text-blue-600 mb-8">Explore</h5>
+                <ul class="space-y-4 text-xs uppercase tracking-widest font-bold text-slate-300">
+                    <li><a href="sourcing.html">Sourcing</a></li>
+                    <li><a href="logistics.html">Logistics</a></li>
+                    <li><a href="industries.html">Industries</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h5 class="text-institutional text-blue-600 mb-8">Operations</h5>
+                <p class="text-xs uppercase tracking-widest font-bold text-slate-500 mb-3">Dubai Hub</p>
+                <p class="text-sm font-bold text-white tracking-wide">procurement@zorixglobal.com</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-20 pt-10 border-t border-slate-900 max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+        <p class="text-slate-500 text-xs uppercase tracking-[0.2em]">© 2026 Zorix Global.</p>
+        <p class="text-slate-500 text-xs uppercase tracking-[0.2em] font-bold">UAE • EU • US • ASIA</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
