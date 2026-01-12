@@ -1,6 +1,6 @@
 <script>
 /* =========================
-   PAGE NAVIGATION
+   PAGE NAVIGATION & MOBILE MENU
 ========================= */
 function navigateTo(pageId) {
     document.querySelectorAll('.page-content').forEach(page => {
@@ -12,19 +12,9 @@ function navigateTo(pageId) {
         targetPage.classList.add('active');
     }
 
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('data-page') === pageId) {
-            link.classList.add('active');
-        }
-    });
-
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-/* =========================
-   MOBILE MENU
-========================= */
 function toggleMenu() {
     const menu = document.getElementById('mobile-menu');
     const hamburgers = document.querySelectorAll('.hamburger');
@@ -40,12 +30,13 @@ function handleMobileNav(pageId) {
 }
 
 /* =========================
-   FORM SUBMISSION (FORMSPREE)
+   FORM SUBMISSION
 ========================= */
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("contact-inquiry-form");
+    const thankYou = document.getElementById("page-thankyou");
 
-    if (!form) return;
+    if (!form || !thankYou) return;
 
     form.addEventListener("submit", async (e) => {
         e.preventDefault();
@@ -65,7 +56,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (response.ok) {
                 form.reset();
-                navigateTo('thankyou');
+
+                // Hide form section
+                form.closest("section").classList.add("hidden");
+
+                // Show thank you
+                thankYou.classList.remove("hidden");
+                thankYou.scrollIntoView({ behavior: "smooth" });
             } else {
                 alert("Submission failed. Please try again.");
             }
@@ -76,14 +73,5 @@ document.addEventListener("DOMContentLoaded", () => {
             btn.disabled = false;
         }
     });
-});
-
-/* =========================
-   SCROLL SAFETY (OPTIONAL)
-========================= */
-window.addEventListener('scroll', () => {
-    if (window.scrollX !== 0) {
-        window.scrollTo(0, window.scrollY);
-    }
 });
 </script>
