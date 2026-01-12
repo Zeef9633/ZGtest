@@ -1,42 +1,10 @@
 <script>
-/* =========================
-   PAGE NAVIGATION & MOBILE MENU
-========================= */
-function navigateTo(pageId) {
-    document.querySelectorAll('.page-content').forEach(page => {
-        page.classList.remove('active');
-    });
-
-    const targetPage = document.getElementById('page-' + pageId);
-    if (targetPage) {
-        targetPage.classList.add('active');
-    }
-
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-function toggleMenu() {
-    const menu = document.getElementById('mobile-menu');
-    const hamburgers = document.querySelectorAll('.hamburger');
-    const isOpen = menu.classList.toggle('active');
-
-    hamburgers.forEach(h => h.classList.toggle('open', isOpen));
-    document.body.style.overflow = isOpen ? 'hidden' : '';
-}
-
-function handleMobileNav(pageId) {
-    navigateTo(pageId);
-    toggleMenu();
-}
-
-/* =========================
-   FORM SUBMISSION
-========================= */
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("contact-inquiry-form");
+    const contactPage = document.getElementById("page-contact");
     const thankYou = document.getElementById("page-thankyou");
 
-    if (!form || !thankYou) return;
+    if (!form || !contactPage || !thankYou) return;
 
     form.addEventListener("submit", async (e) => {
         e.preventDefault();
@@ -56,12 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (response.ok) {
                 form.reset();
-
-                // Hide form section
-                form.closest("section").classList.add("hidden");
-
-                // Show thank you
-                thankYou.classList.remove("hidden");
+                contactPage.classList.add("hidden"); // hide form page
+                thankYou.classList.remove("hidden"); // show thank you page
                 thankYou.scrollIntoView({ behavior: "smooth" });
             } else {
                 alert("Submission failed. Please try again.");
@@ -74,4 +38,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+// SPA-style navigation
+function navigateTo(pageId) {
+    document.querySelectorAll(".page-content").forEach(p => p.classList.add("hidden"));
+    const target = document.getElementById("page-" + pageId);
+    if (target) target.classList.remove("hidden");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
 </script>
